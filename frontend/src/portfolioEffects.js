@@ -223,7 +223,6 @@ export function initializePortfolioEffects() {
 
         let targetScale = 1;
         let targetTranslateY = 0;
-        let targetBrightness = 1;
 
         if (rect.top <= stickyTop + 2) {
           let stackedProgress = 0;
@@ -245,11 +244,9 @@ export function initializePortfolioEffects() {
           const visualDepth = Math.min(stackedProgress, 4);
           targetTranslateY = -(visualDepth * 20);
           targetScale = 1 - visualDepth * 0.04;
-          targetBrightness = 1;
         }
 
         card.style.transform = `translateY(${targetTranslateY}px) scale(${targetScale})`;
-        card.style.filter = `brightness(${targetBrightness})`;
         card.style.transformOrigin = "top center";
 
         const mockup = card.querySelector(".project-mockup");
