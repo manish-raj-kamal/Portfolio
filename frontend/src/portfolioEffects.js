@@ -246,7 +246,8 @@ export function initializePortfolioEffects() {
           targetScale = 1 - visualDepth * 0.04;
         }
 
-        card.style.transform = `translateY(${targetTranslateY}px) scale(${targetScale})`;
+        card.style.zIndex = String(index + 1);
+        card.style.transform = `translateY(${targetTranslateY}px) scale(${targetScale}) translateZ(0)`;
         card.style.transformOrigin = "top center";
 
         const mockup = card.querySelector(".project-mockup");
