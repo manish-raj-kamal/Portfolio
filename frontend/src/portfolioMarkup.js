@@ -232,7 +232,7 @@ export const portfolioMarkup = `
               <div class="project-tech"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
               <div class="project-links">
                 <a href="https://utility-scheduler.vercel.app" target="_blank" class="project-link live-demo">Live Demo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
-                <a href="https://github.com/manish-raj-kamal/Utility-Scheduler" target="_blank" class="project-link">GitHub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+                <a href="https://github.com/manish-raj-kamal/Fair-Slot" target="_blank" class="project-link">GitHub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
               </div>
             </div>
             <div class="project-visual">
