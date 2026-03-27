@@ -198,6 +198,25 @@ export function initializePortfolioEffects() {
     const cards = document.querySelectorAll(".project-card");
     if (!cards.length) return;
 
+    const isMobileLayout = () => window.innerWidth <= 767;
+
+    const resetCardTransforms = () => {
+      cards.forEach((card) => {
+        card.style.transform = "none";
+        card.style.zIndex = "";
+        card.style.transformOrigin = "";
+
+        const mockup = card.querySelector(".project-mockup");
+        if (mockup) {
+          mockup.style.transform = "none";
+        }
+      });
+    };
+
+    if (isMobileLayout()) {
+      resetCardTransforms();
+    }
+
     if ("IntersectionObserver" in window) {
       const observer = addObserver(
         new IntersectionObserver(
@@ -215,6 +234,11 @@ export function initializePortfolioEffects() {
     }
 
     const onScroll = () => {
+      if (isMobileLayout()) {
+        resetCardTransforms();
+        return;
+      }
+
       const viewportHeight = window.innerHeight;
 
       cards.forEach((card, index) => {
@@ -260,6 +284,7 @@ export function initializePortfolioEffects() {
     };
 
     addListener(window, "scroll", onScroll, { passive: true });
+    addListener(window, "resize", onScroll, { passive: true });
     onScroll();
   };
 
@@ -293,6 +318,10 @@ export function initializePortfolioEffects() {
   };
 
   const initTiltEffect = () => {
+    if (window.innerWidth <= 767 || window.matchMedia("(hover: none)").matches) {
+      return;
+    }
+
     const cards = document.querySelectorAll(".project-card");
 
     cards.forEach((card) => {
@@ -438,6 +467,8 @@ export function initializePortfolioEffects() {
     const SPR_Y = 0.11;    // slightly stiffer vertical (gravity-like return)
     const MAX_X = 140;     // px: how far horizontally card can swing
     const MAX_Y = 90;      // px: how far vertically card can drift
+    const BOTTOM_BUFFER = 16; // keeps card safely above hero section bottom edge
+    const BOTTOM_SOFT_ZONE = 72; // start easing before hard limit to avoid abrupt stops
 
     let raf = null;
 
@@ -562,6 +593,25 @@ export function initializePortfolioEffects() {
       if (cx < -1000) { cx = -1000; vx *= -0.25; }
       if (cy > 1000) { cy = 1000; vy *= -0.25; }
       if (cy < -1200) { cy = -1200; vy *= -0.25; }
+
+      // Section endpoint: progressively resist downward motion near hero bottom,
+      // then hard clamp exactly at the bottom boundary so card never drops below.
+      const heroRect = hero.getBoundingClientRect();
+      const sceneRect = scene.getBoundingClientRect();
+      const bottomLimit = heroRect.bottom - BOTTOM_BUFFER;
+      const distanceToBottom = bottomLimit - sceneRect.bottom;
+
+      if (distanceToBottom < BOTTOM_SOFT_ZONE && vy > 0) {
+        const t = Math.max(0, Math.min(1, distanceToBottom / BOTTOM_SOFT_ZONE));
+        const resistance = 0.35 + t * 0.65;
+        vy *= resistance;
+      }
+
+      if (sceneRect.bottom > bottomLimit) {
+        const overflow = sceneRect.bottom - bottomLimit;
+        cy -= overflow;
+        if (vy > 0) vy *= -0.18;
+      }
 
       // Natural lean: card tilts slightly in the direction it swings
       const tilt = cx * 0.055;                 

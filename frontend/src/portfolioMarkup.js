@@ -120,12 +120,31 @@ export const portfolioMarkup = `
       <div class="about-grid">
         <div class="about-heading animate-on-scroll">
           <h2>FROM <span class="highlight-text">DISCOVERY</span><br>TO <span class="highlight-text">DELIVERY</span></h2>
+          <div class="about-floating-tags">
+            <span class="about-float-pill">Backend Focused</span>
+            <span class="about-float-pill">System Thinking</span>
+            <span class="about-float-pill">Product Mindset</span>
+          </div>
         </div>
         <div class="about-glass-card animate-on-scroll">
+          <div class="about-card-top">
+            <div class="about-presence">
+              <span class="about-presence-dot"></span>
+              Engineering Student at LPU
+            </div>
+            <div class="about-orbit" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
           <div class="about-content">
             <p>I am a Computer Science Engineering student at <strong>Lovely Professional University</strong> with a strong interest in backend development, scalable systems, and full-stack applications.</p>
             <p>I have built multiple real-world projects including logistics platforms, SaaS-style applications, and Android apps published on the Play Store. My work focuses on designing REST APIs, database schemas, and reliable backend systems while also building clean user interfaces when needed.</p>
             <p>I enjoy solving engineering problems, applying data structures in practical systems, and learning how large-scale applications manage performance and reliability.</p>
+            <div class="about-highlights">
+              <div class="about-highlight-box"><span>API Design</span><strong>Clean and scalable service layers</strong></div>
+              <div class="about-highlight-box"><span>Database Work</span><strong>Relational and NoSQL schema planning</strong></div>
+              <div class="about-highlight-box"><span>Execution</span><strong>From idea to production delivery</strong></div>
+            </div>
             <div class="about-stats">
               <div class="stat-item">
                 <span class="stat-number">10+</span>
@@ -151,25 +170,56 @@ export const portfolioMarkup = `
     <div class="container">
       <div class="section-label animate-on-scroll"><span class="label-dot"></span>SKILLS &amp; TECHNOLOGIES</div>
       <h2 class="section-heading animate-on-scroll">MY <span class="highlight-text">TECH STACK</span></h2>
+      <p class="skills-intro animate-on-scroll">A practical toolkit I use to design APIs, ship full-stack products, and build production-ready systems.</p>
       <div class="skills-grid">
         <div class="skill-category animate-on-scroll">
-          <div class="skill-category-header"><div class="skill-icon">💻</div><h3>Programming Languages</h3></div>
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png" alt="Programming languages" class="skill-icon-png" loading="lazy"></div>
+            <div>
+              <h3>Programming Languages</h3>
+              <p class="skill-category-note">Core logic and DSA foundations</p>
+            </div>
+          </div>
           <div class="skill-tags"><span class="skill-tag">C++</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Python</span><span class="skill-tag">Kotlin</span></div>
         </div>
         <div class="skill-category animate-on-scroll">
-          <div class="skill-category-header"><div class="skill-icon">⚙️</div><h3>Backend Development</h3></div>
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2699.png" alt="Backend development" class="skill-icon-png" loading="lazy"></div>
+            <div>
+              <h3>Backend Development</h3>
+              <p class="skill-category-note">Reliable API architecture</p>
+            </div>
+          </div>
           <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Auth / JWT</span></div>
         </div>
         <div class="skill-category animate-on-scroll">
-          <div class="skill-category-header"><div class="skill-icon">🗄️</div><h3>Databases</h3></div>
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f5c4.png" alt="Databases" class="skill-icon-png" loading="lazy"></div>
+            <div>
+              <h3>Databases</h3>
+              <p class="skill-category-note">Schema design and optimization</p>
+            </div>
+          </div>
           <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Supabase</span></div>
         </div>
         <div class="skill-category animate-on-scroll">
-          <div class="skill-category-header"><div class="skill-icon">🎨</div><h3>Frontend</h3></div>
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3a8.png" alt="Frontend" class="skill-icon-png" loading="lazy"></div>
+            <div>
+              <h3>Frontend</h3>
+              <p class="skill-category-note">Responsive interfaces and UX flow</p>
+            </div>
+          </div>
           <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">TypeScript</span></div>
         </div>
         <div class="skill-category animate-on-scroll">
-          <div class="skill-category-header"><div class="skill-icon">🛠️</div><h3>Tools &amp; Platforms</h3></div>
+          <div class="skill-category-header">
+            <div class="skill-icon-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6e0.png" alt="Tools and platforms" class="skill-icon-png" loading="lazy"></div>
+            <div>
+              <h3>Tools &amp; Platforms</h3>
+              <p class="skill-category-note">Workflow and delivery ecosystem</p>
+            </div>
+          </div>
           <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">Android Studio</span><span class="skill-tag">Figma</span><span class="skill-tag">Linux</span></div>
         </div>
       </div>
@@ -182,10 +232,15 @@ export const portfolioMarkup = `
       <div class="section-label animate-on-scroll"><span class="label-dot"></span>EXPERIENCE</div>
       <h2 class="section-heading animate-on-scroll">WHERE I'VE <span class="highlight-text">WORKED</span></h2>
       <div class="experience-timeline">
+        <div class="timeline-rail" aria-hidden="true"></div>
         <div class="experience-card animate-on-scroll">
+          <span class="timeline-node" aria-hidden="true"></span>
           <div class="exp-date"><span class="exp-date-text">Oct 2025 – Nov 2025</span></div>
           <div class="exp-content">
-            <h3 class="exp-title">Freelance Developer</h3>
+            <div class="exp-title-row">
+              <div class="exp-logo-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bc.png" alt="Freelance" class="exp-logo" loading="lazy"></div>
+              <h3 class="exp-title">Freelance Developer</h3>
+            </div>
             <p class="exp-subtitle">Truck Booking Platform</p>
             <ul class="exp-list">
               <li>Built REST APIs using Node.js for booking, authentication, and trip tracking</li>
@@ -197,9 +252,13 @@ export const portfolioMarkup = `
           </div>
         </div>
         <div class="experience-card animate-on-scroll">
+          <span class="timeline-node" aria-hidden="true"></span>
           <div class="exp-date"><span class="exp-date-text">Jun 2025 – Jul 2025</span></div>
           <div class="exp-content">
-            <h3 class="exp-title">Software Development Trainee</h3>
+            <div class="exp-title-row">
+              <div class="exp-logo-wrap"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f393.png" alt="Trainee" class="exp-logo" loading="lazy"></div>
+              <h3 class="exp-title">Software Development Trainee</h3>
+            </div>
             <p class="exp-subtitle">Centre for Professional Enhancement, LPU</p>
             <ul class="exp-list">
               <li>Built message logging system in C++ using HTTP communication</li>
