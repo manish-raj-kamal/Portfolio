@@ -66,7 +66,7 @@ export const portfolioMarkup = `
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
         </a>
         <a href="#contact" class="btn-secondary">Get In Touch</a>
-        <a href="/assets/Manish-Raj-Kamal CV.pdf" download class="btn-secondary">
+        <a href="/assets/Manish-Raj-Kamal CV.pdf?v=1" download class="btn-secondary">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Resume
         </a>
@@ -523,14 +523,14 @@ export const portfolioMarkup = `
               <div class="paper-edge edge-top"></div><div class="paper-edge edge-right"></div>
               <div class="paper-edge edge-bottom"></div><div class="paper-edge edge-left"></div>
               <div class="resume-iframe-wrapper">
-                <iframe src="/assets/Manish-Raj-Kamal CV.pdf#toolbar=0" class="resume-iframe" title="Resume Preview"></iframe>
+                <iframe src="/assets/Manish-Raj-Kamal CV.pdf?v=1#toolbar=0" class="resume-iframe" title="Resume Preview"></iframe>
               </div>
               <div class="resume-actions">
-                <a href="/assets/Manish-Raj-Kamal CV.pdf" download class="btn-primary btn-download">
+                <a href="/assets/Manish-Raj-Kamal CV.pdf?v=1" download class="btn-primary btn-download">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Download
                 </a>
-                <a href="/assets/Manish-Raj-Kamal CV.pdf" target="_blank" class="btn-resume-action">
+                <a href="/assets/Manish-Raj-Kamal CV.pdf?v=1" target="_blank" class="btn-resume-action">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                   Full Screen
                 </a>
