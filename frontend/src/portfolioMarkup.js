@@ -464,7 +464,7 @@ export const portfolioMarkup = `
             <h3>Lovely Professional University</h3>
             <p class="edu-degree">Bachelor of Technology – Computer Science and Engineering</p>
             <div class="edu-detail">
-              <span class="edu-badge">CGPA: 7.58</span>
+              <span class="edu-badge">CGPA: 7.74</span>
               <span class="edu-location">📍 Phagwara, Punjab</span>
             </div>
           </div>
